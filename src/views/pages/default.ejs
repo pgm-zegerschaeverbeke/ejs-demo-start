@@ -15,5 +15,17 @@
 <p>
     <%= content %>
 </p>
+<hr>
+<% if(team) { %>
+ <h3>Maak kennis met ons team:</h3>
+ <ul>
+      <% team.forEach(dino => { %>
+          <li>
+              <strong><%= dino %></strong>
+          </li>
+      <% }); %>
+ </ul>
+<% } %>
+
 </body>
 </html>
