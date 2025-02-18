@@ -1,39 +1,15 @@
-<!DOCTYPE html>
-<html lang="nl">
+<marquee behavior="smooth" direction="left">contact</marquee>
+<h1>
+  <%= title %>
+</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <title>Mijn eerste EJS applicatie</title>
-</head>
-
-<body>
-  <marquee behavior="smooth" direction="left">contact</marquee>
-  <nav class="primary">
-    <% navItems.forEach(navItem=> { %>
-      <a href="<%= navItem.url %>">
-        <%= navItem.label %>
-      </a>
-      <% }); %>
-  </nav>
-  <h1>
-    <%= title %>
-  </h1>
-
-  <p>
-    <%= content %>
-  </p>
-  <hr>
-  <h3>
-    <%= person.firstname + " " + person.lastname %>
-  </h3>
-  <address>
-    <%= person.location.city + ", " + person.location.country %>
-  </address>
-  <hr>
-</body>
-
-</html>
+<p>
+  <%= content %>
+</p>
+<hr>
+<h3>
+  <%= person.firstname + " " + person.lastname %>
+</h3>
+<address>
+  <%= person.location.city + ", " + person.location.country %>
+</address>

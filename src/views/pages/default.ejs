@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="/css/main.css">
-  <title>Mijn eerste EJS applicatie</title>
-</head>
-<body>
-  <nav class="primary">
-    <% navItems.forEach(navItem=> { %>
-      <a href="<%= navItem.url %>">
-        <%= navItem.label %>
-      </a>
-      <% }); %>
-  </nav>
-  <h1>
-    <%= title %>
+<h1>
+  <%= title %>
 </h1>
 <p>
-    <%= content %>
+  <%= content %>
 </p>
 <hr>
 <% if(team) { %>
- <h3>Maak kennis met ons team:</h3>
- <ul>
-      <% team.forEach(dino => { %>
-          <li>
-              <%- dino %>
-          </li>
+  <h3>Maak kennis met ons team:</h3>
+  <ul>
+    <% team.forEach(dino=> { %>
+      <li>
+        <%- dino %>
+      </li>
       <% }); %>
- </ul>
-<% } %>
-
-</body>
-</html>
+  </ul>
+  <% } %>
