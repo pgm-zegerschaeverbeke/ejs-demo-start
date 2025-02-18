@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,31 @@
   <link rel="stylesheet" href="/css/main.css">
   <title>Mijn eerste EJS applicatie</title>
 </head>
+
 <body>
-    <marquee behavior="smooth" direction="left">contact</marquee>
+  <marquee behavior="smooth" direction="left">contact</marquee>
+  <nav class="primary">
+    <% navItems.forEach(navItem=> { %>
+      <a href="<%= navItem.url %>">
+        <%= navItem.label %>
+      </a>
+      <% }); %>
+  </nav>
   <h1>
     <%= title %>
-</h1>
-<p>
+  </h1>
+
+  <p>
     <%= content %>
-</p>
+  </p>
+  <hr>
+  <h3>
+    <%= person.firstname + " " + person.lastname %>
+  </h3>
+  <address>
+    <%= person.location.city + ", " + person.location.country %>
+  </address>
+  <hr>
 </body>
+
 </html>

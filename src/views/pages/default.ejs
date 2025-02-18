@@ -9,6 +9,13 @@
   <title>Mijn eerste EJS applicatie</title>
 </head>
 <body>
+  <nav class="primary">
+    <% navItems.forEach(navItem=> { %>
+      <a href="<%= navItem.url %>">
+        <%= navItem.label %>
+      </a>
+      <% }); %>
+  </nav>
   <h1>
     <%= title %>
 </h1>
@@ -21,7 +28,7 @@
  <ul>
       <% team.forEach(dino => { %>
           <li>
-              <strong><%= dino %></strong>
+              <%- dino %>
           </li>
       <% }); %>
  </ul>

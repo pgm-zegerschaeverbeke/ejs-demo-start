@@ -1,4 +1,5 @@
 // import statements
+
 import express from "express";
 import path from "path";
 import { home, about, contact, privacy } from "./controllers/PageController.js";
